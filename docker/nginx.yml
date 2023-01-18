@@ -12,9 +12,9 @@ services:
       - "80:8080"
       - "443:8443"
     volumes:
-      - ./nginx/config:/etc/nginx/conf.d
-      - ./nginx/cert:/etc/cert
-      - ./nginx/sites:/usr/share/nginx/sites
+     # - ./nginx/config:/etc/nginx/conf.d
+     # - ./nginx/cert:/etc/cert
+     # - ./nginx/sites:/usr/share/nginx/sites
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
 
