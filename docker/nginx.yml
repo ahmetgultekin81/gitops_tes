@@ -10,7 +10,7 @@ services:
       #- ../nginx/config:/etc/nginx/conf.d
       #- ../nginx/cert:/etc/cert
       #- ../nginx/sites:/usr/share/nginx/sites
-      #- ../nginx/sites:/usr/share/nginx/html
+      - ../nginx/sites:/usr/share/nginx/html
                        
     restart: unless-stopped
     deploy:
