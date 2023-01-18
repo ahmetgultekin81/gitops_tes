@@ -3,7 +3,7 @@ version: "3.2"
 services:
   nginx-git:
     #image: nginx
-    build: ../nginx/Dockerfile
+    build: .
     ports:
       - 8080:80
     volumes:
