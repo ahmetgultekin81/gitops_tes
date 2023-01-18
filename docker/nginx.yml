@@ -7,7 +7,9 @@ services:
       - 8080:80
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ../nginx/sites/:/usr/share/nginx/html
+      - ../nginx/config:/etc/nginx/conf.d
+      - ../nginx/cert:/etc/cert
+      - ../nginx/sites:/usr/share/nginx/sites
     restart: unless-stopped
     deploy:
       mode: replicated
