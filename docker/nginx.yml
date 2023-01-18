@@ -1,20 +1,13 @@
-version: "3"
+version: "3.2"
 
 services:
   nginx-git:
-    image: nginx:latest
-    #build: ./services/nginx/.
-    #network_mode: host
-    #networks:
-    #  default:
-    #    ipv4_address: 173.11.0.200
+    image: nginx
     ports:
-      - "8080:80"
-      - "8443:443"
+      - 8080:80
     volumes:
-     # - ./nginx/config:/etc/nginx/conf.d
-     # - ./nginx/cert:/etc/cert
-     # - ./nginx/sites:/usr/share/nginx/sites
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
-
+    deploy:
+      mode: replicated
+      replicas: 1
