@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  nginx:
+    container_name: nginx
+    build: ./services/nginx/.
+    #network_mode: host
+    networks:
+      default:
+        ipv4_address: 173.11.0.200
+    ports:
+      - "80:8080"
+      - "443:8443"
+    volumes:
+      - ../nginx/config:/etc/nginx/conf.d
+      - ../nginx/cert:/etc/cert
+      - ../nginx/sites:/usr/share/nginx/sites
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+
