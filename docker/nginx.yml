@@ -9,8 +9,8 @@ services:
       - /etc/localtime:/etc/localtime:ro
       #- ../nginx/config:/etc/nginx/conf.d
       #- ../nginx/cert:/etc/cert
-      - ../nginx/sites:/usr/share/nginx/sites
-      - ../nginx/sites:/usr/share/nginx/html
+      - ../nginx/sites:/usr/share/nginx/sites:ro
+      - ../nginx/sites:/usr/share/nginx/html:ro
                        
     restart: unless-stopped
     deploy:
