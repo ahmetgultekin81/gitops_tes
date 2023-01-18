@@ -4,11 +4,8 @@ services:
   nginx-git:
     image: nginx:latest
     ports:
-      - "8080:80"
+      - 80:80
     volumes:
-     # - ./nginx/config:/etc/nginx/conf.d
-     # - ./nginx/cert:/etc/cert
-     # - ./nginx/sites:/usr/share/nginx/sites
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     deploy:
