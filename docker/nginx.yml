@@ -17,4 +17,7 @@ services:
      # - ./nginx/sites:/usr/share/nginx/sites
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
+    deploy:
+      mode: replicated
+      replicas: 2
 
