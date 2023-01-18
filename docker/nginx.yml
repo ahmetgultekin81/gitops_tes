@@ -2,7 +2,7 @@ version: "3.2"
 
 services:
   nginx-git:
-    image: nginx:latest
+    image: nginx
     ports:
       - 8080:80
     volumes:
