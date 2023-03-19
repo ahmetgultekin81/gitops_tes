@@ -5,7 +5,7 @@ services:
     #image: nginx
     build: .
     ports:
-      - 9090:80
+      - 9190:80
     volumes:
       - /etc/localtime:/etc/localtime:ro
       #- ../nginx/config:/etc/nginx/conf.d
